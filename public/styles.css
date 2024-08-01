@@ -1,0 +1,27 @@
+
+body {
+  font-family: Arial, sans-serif;
+  background-color:aquamarine;
+}
+.navbar {
+  margin-bottom: 20px;
+}
+.container {
+  background: white;
+  padding: 15px;
+  border-radius: 80px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+table {
+  margin-top: 20px;
+}
+table th, table td {
+  vertical-align: middle ;
+}
+.goal-status {
+  width: 100%;
+}
+
+
+
+

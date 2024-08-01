@@ -1,0 +1,39 @@
+<%- include ('partials/navbar.ejs') %>
+
+
+
+<div class="container">
+    
+    <br>
+    <div class="text-center"><h2>Update Goals</h2></div>
+    <br>
+    <div class="text-center">
+      <% if (goal) { %> 
+        <form action="/goal/<%= goal.goalsId%>?_method=PUT" method="POST" enctype="multipart/form-data">
+
+            <label for="goalDescription">Goal Description:</label><br>
+            <input type="text" id="goalDescription" name="goalDescription" required><br><br>
+
+            <label for="CarbonFootprint">Carbon Footprint:</label><br>
+            <input type="number" id="CarbonFootprint" name="CarbonFootprint" min="0" step="0.01" required><br><br>
+
+            <label for="goalStartDate">Goal Start Date:</label><br>
+            <input type="date" id="goalStartDate" name="goalStartDate" required><br><br>
+
+            <label for="goalEndDate">Goal End Date:</label><br>
+            <input type="date" id="goalEndDate" name="goalEndDate" required><br><br>
+
+            <label for="goalStatus">Status:</label><br>
+            <select class="form-select form-select-sm" id="goalStatus" name="goalStatus" required>
+                <option value="not started">Not Started</option>
+                <option value="in progress">In Progress</option>
+                <option value="completed">Completed</option>
+            </select>
+            <button type="submit">Update goal</button>
+        </form>
+      <% } else { %>
+          <p>No goal found.</p>
+      <% } %>
+      <a href ="/">Back</a>
+    </div>
+</div>

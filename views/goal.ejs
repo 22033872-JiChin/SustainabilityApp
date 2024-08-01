@@ -1,0 +1,36 @@
+<%- include ('partials/navbar.ejs') %>
+
+<div class="container">
+    <br>
+    <div class="row">
+        <div class="col-12">
+            <div class="text-center"><h2>Goal Details</h2></div>
+            <br>
+            <% if (goal) { %> <!-- Check if goal data exists -->
+                <div class="row">
+                    <div class="col-md-6 offset-md-3">
+                        <p><b>Goal ID:</b> <%= goal.goalsId %></p>
+                        <p><b>Description:</b> <%= goal.goalDescription %></p>
+                        <p><b>Carbon Footprint:</b> <%= goal.CarbonFootprint %></p>
+                        <p><b>Start Date:</b> <%= new Date(goal.goalStartDate).toLocaleDateString() %></p>
+                        <p><b>End Date:</b> <%= new Date(goal.goalEndDate).toLocaleDateString() %></p>
+                        <p><b>Status:</b> <%= goal.goalStatus %></p>
+                    </div>
+                </div>
+            <% } else { %>
+                <div class="row">
+                    <div class="col-md-6 offset-md-3">
+                        <p>No Goal found.</p>
+                    </div>
+                </div>
+            <% } %>
+            <div class="row">
+                <div class="col-12 text-center">
+                    <a href="/" class="btn btn-secondary">Back</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
