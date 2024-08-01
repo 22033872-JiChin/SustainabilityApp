@@ -22,10 +22,10 @@ app.set('view engine', 'ejs');
 
 // Set up SQL connection
 const connection = mysql.createConnection({
-  host: "localhost",
-  user: "root",
-  password: "",
-  database: "sustainabilityapp",
+  host: "db4free.net",
+  user: "jichin111",
+  password: "jichin111",
+  database: "c237db111",
 });
 
 connection.connect((err) => {
